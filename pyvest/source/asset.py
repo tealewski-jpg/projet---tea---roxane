@@ -1,3 +1,4 @@
+
 from pyvest.source.priceseries import PriceSeries
 from pyvest.source.constant import CurrencyEnum
 

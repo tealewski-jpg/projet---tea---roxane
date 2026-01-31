@@ -99,15 +99,15 @@ class PriceSeries:
         return 0.0
      return (self.values[t] - peak) / peak
 
-def max_drawdown(self) -> float:
-    """Drawdown maximum sur toute la série."""
-    max_dd = 0.0
-    peak = self.values[0]
+    def max_drawdown(self) -> float:
+        """Drawdown maximum sur toute la série."""
+        max_dd = 0.0
+        peak = self.values[0]
 
-    for value in self.values[1:]:
-        peak = max(peak, value)
-        if peak > 0:
-            dd = (value - peak) / peak
-            max_dd = min(max_dd, dd)
+        for value in self.values[1:]:
+            peak = max(peak, value)
+            if peak > 0:
+                dd = (value - peak) / peak
+                max_dd = min(max_dd, dd)
 
-    return max_dd
+        return max_dd
